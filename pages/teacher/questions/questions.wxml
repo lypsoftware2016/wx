@@ -1,0 +1,9 @@
+<!--pages/teacher/questions/questions.wxml-->
+<view class='content'>
+  <text class='header'>课堂问题</text>
+  <view class = 'btn_block'>
+    <button class='content_btn' bindtap='toHistory'><text>历史作业</text></button>
+    <button class='content_btn' bindtap='toCreate'><text>新建作业</text></button>
+  </view>
+</view>
+

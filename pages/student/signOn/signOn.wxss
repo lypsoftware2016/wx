@@ -1,0 +1,22 @@
+/* pages/student/signOn/signOn.wxss */
+@import "/lib/weui.wxss";
+
+page{
+  height: 100%;
+}
+
+.content{
+  width: 100%;
+  height: 100%;
+}
+
+.m_input_style{
+  margin-bottom: 10%; 
+}
+
+.check_input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
+}

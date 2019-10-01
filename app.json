@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/student/index/index",
+    "pages/student/checkIn/checkIn",
+    "pages/student/courseDetail/courseDetail",
+    "pages/student/courseGrade/courseGrade",
+    "pages/student/courseDoc/courseDoc",
+    "pages/student/mine/mine",
+    "pages/student/classSchedule/classSchedule",
+    "pages/student/courseVideo/courseVideo",
+    "pages/student/appointment/appointment",
+    "pages/student/video/video",
+    "pages/teacher/index/index",
+    "pages/student/feedBack/feedBack",
+    "pages/student/signOn/signOn",
+    "pages/teacher/mine/mine",
+    "pages/teacher/courseDetail/courseDetail",
+    "pages/teacher/questions/questions",
+    "pages/teacher/publishHomework/publishHomework",
+    "pages/teacher/history/history",
+    "pages/teacher/history/detail",
+    "pages/teacher/appointment/appointment",
+    "pages/teacher/feedBack/feedBack",
+    "pages/teacher/courseGrade/courseGrade",
+    "pages/teacher/checkIn/checkIn",
+    "pages/student/questions/questions",
+    "pages/student/homeworkDetail/homeworkDetail",
+    "pages/teacher/statistic/statistic",
+    "pages/teacher/statisticDetail/statisticDetail",
+    "pages/teacher/location/location",
+    "pages/student/locationSignOn/locationSignOn",
+    "pages/student/locationDetail/locationDetail"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

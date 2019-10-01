@@ -1,0 +1,13 @@
+<!--pages/student/signOn/signOn.wxml-->
+<view class='content'>
+  <text class='header'>签到</text>
+  <view class='check_input'>
+    <view class="weui-cells__title">输入签到码:</view>
+    <view class="weui-cells weui-cells_after-title m_input_style">
+      <view class="weui-cell">
+        <textarea class="weui-input" auto-focus placeholder="" maxlength='20' bindinput='inputToken'/>
+      </view>
+    </view>
+    <button disabled="{{disable}}" type='primary' bindtap='signOn'>签到</button>
+  </view>
+</view>

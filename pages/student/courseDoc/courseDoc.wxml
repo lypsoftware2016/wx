@@ -1,0 +1,22 @@
+<!--pages/student/courseDoc/courseDoc.wxml-->
+<view class='content'>
+  <text class='header'>课程资料</text>
+  <view class='list_column'>
+    <button wx:for="{{doc_list}}" class='list_column btn_noborder btn_nocolor' bindtap='showActions' data-item='{{item}}'>
+      <view class="divLine"></view>
+      <view class='list_item_row'>
+        <view class='list_item_left'>
+          <text> {{item.cwName}}</text>
+        </view>
+        <view class='list_item_right doc_labels'>
+          <view class='list_column'>
+            <view> 上传时间：{{item.uploadTime}} </view>
+            <view> 浏览次数：{{item.viewCount}} </view>
+            <view> 下载次数：{{item.downCount}} </view>
+          </view>
+        </view>
+      </view>
+    </button>
+    <view class="divLine"></view>
+  </view>
+</view>

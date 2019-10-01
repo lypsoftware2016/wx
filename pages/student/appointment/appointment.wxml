@@ -1,0 +1,41 @@
+<!--pages/student/appointment/appointment.wxml-->
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+<view class='content'>
+  <view class='top'>
+  <button class='header' bindtap='showAppoint'>预约列表</button>
+  <button class='appointed' bindtap='showAppointed'>已预约列表</button>
+  </view>
+  <view wx:if='{{!ashow}}' class='haveAppointed'>
+    <view wx:for='{{have_appointed_list}}' wx:key='id' class='list_column'>
+      <view class='list_item_row'>
+        <view class='list_item_left'>
+         <text>教师: {{item.tName}}\n</text>
+         <text class='showtime'>开始:{{item.start}}\n</text>
+         <text class='showtime'>结束:{{item.end}}</text>
+        </view>
+      <view class='list_item_right'>
+        <button class='btn_chosed' wx:if='{{item.isAppointed==true}}' bindtap='cancelAppointment' data-item='{{item}}' data-id='{{item.cId}}'> 取消预约 </button>
+        <button class='btn_unchosed' wx:else bindtap='appointment' data-item='{{item}}' data-id='{{item.cId}}'> 预约 </button>
+      </view>
+      </view>
+    </view>
+    </view>
+
+  <view wx:if='{{ashow}}'>
+  <view wx:for='{{appointment_list}}' wx:key='id' class='list_column'>
+    <view class='list_item_row'>
+      <view class='list_item_left'>
+        <text>教师: {{item.tName}}\n</text>
+        <text class='showtime'>开始:{{item.start}}\n</text>
+        <text class='showtime'>结束:{{item.end}}</text>
+      </view>
+      <view class='list_item_right'>
+        <button class='btn_chosed' wx:if='{{item.isAppointed==true}}' bindtap='cancelAppointment' data-item='{{item}}' data-id='{{item.cId}}'> 取消预约 </button>
+        <button class='btn_unchosed' wx:else bindtap='appointment' data-item='{{item}}' data-id='{{item.cId}}'> 预约 </button>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

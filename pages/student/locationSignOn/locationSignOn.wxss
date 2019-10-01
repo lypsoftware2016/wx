@@ -1,0 +1,29 @@
+/* pages/student/locationSignOn/locationSignOn.wxss */
+
+.header {
+  font-size: 25px;
+}
+
+.list {
+  margin-top: 2%;
+  display: flex;
+  width: 100%;
+}
+
+.list_item {
+  display: flex;
+  flex-direction: row;
+  margin: 5%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  width: 100%;
+}
+
+.list_btn {
+  width: 100%;
+}
+
+
+.list_btn > button::after {
+  border: none;
+}

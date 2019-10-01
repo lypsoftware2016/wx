@@ -1,0 +1,40 @@
+<!--pages/student/homeworkDetail/homeworkDetail.wxml-->
+<view class='question'>
+  <text class='header'>课堂问题：</text>
+  <form bindsubmit='formSubmit'>
+    <scroll-view scroll-y='true' class='list_column'>
+      <view wx:for='{{choiceQuestion_list}}' class='list_column-concretequestion'>
+        <view class='list_item_row'>
+          <view class='question_name'>
+            <text>{{item.cqContent}}</text>
+          </view>
+          <view class='answer_select' wx:if="{{true}}">
+            <checkbox-group class='checkbox-group' bindchange='checkboxChange'>
+              <checkbox class='checkbox' wx:if="{{item.optionA.length != 0}}" value='A+{{item.cqId}}' checked='{{item.checked}}'>
+                <view class='option-content'>
+                  <text> A. {{item.optionA}}</text>
+                </view>
+              </checkbox>
+              <checkbox class='checkbox' wx:if="{{item.optionB.length != 0}}" value='B+{{item.cqId}}' checked='{{item.checked}}'>
+                <view class='option-content'>
+                  <text> B. {{item.optionB}}</text>
+                </view>
+              </checkbox>
+              <checkbox class='checkbox' wx:if="{{item.optionC.length != 0}}" value='C+{{item.cqId}}' checked='{{item.checked}}'>
+                <view class='option-content'>
+                  <text> C. {{item.optionC}}</text>
+                </view>
+              </checkbox>
+              <checkbox class='checkbox' wx:if="{{item.optionD.length != 0}}" value='D+{{item.cqId}}' checked='{{item.checked}}'>
+                <view class='option-content'>
+                  <text> D. {{item.optionD}}</text>
+                </view>
+              </checkbox>
+            </checkbox-group>
+          </view>
+        </view>
+      </view>
+      <button type='primary' class='sub' form-type='submit' >提交</button>
+    </scroll-view>
+  </form>
+</view>

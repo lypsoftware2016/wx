@@ -1,0 +1,10 @@
+<!--pages/teacher/history/history.wxml-->
+<view class='content'>
+  <text class='header'>发布历史</text>
+
+  <view class = 'btn_block'>
+    <button class='content_btn'  wx:for-items="{{items}}" bindtap='toDetail' data-title="{{item.title}}" data-ddl="{{item.releasetime}}">
+      <text>{{item.title}}</text>
+    </button>
+  </view>
+</view>

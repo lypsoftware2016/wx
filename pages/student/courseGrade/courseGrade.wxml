@@ -1,0 +1,35 @@
+<!--pages/student/courseGrade/courseGrade.wxml-->
+<view class='content'>
+
+  <!--
+  <view wx:for='{{class_list}}' wx:key='id' class='list_column'>
+    <view class='course_label'>
+      <view class='list_item_row'>
+        <view class='list_item_left'>
+          <text>{{cName}}: {{grade}}</text>
+        </view>
+        <view class='list_item_right'>
+          <button class='btn_unchosed' bindtap='showModal' data-id='{{cId}}' size = 'mini'> 成绩复议 </button>
+        </view>
+      </view>
+    </view>
+  </view>
+  -->
+  <text class='header'>课程成绩</text>
+  <view>
+    <text>{{cName}}: {{grade}}</text>
+  </view>
+  <view>
+    <button bindtap='showModal' size = 'mini'> 成绩复议 </button>
+  </view>
+  
+  <view>
+  <text class='header'>复议结果:</text>
+  <text>{{result}}</text>
+  </view>
+  
+
+   <modal id="modal" hidden="{{hiddenmodalput}}" title="输入复议内容" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+    <input type='text' placeholder="复议内容" auto-focus bindinput='inputReview'/>
+   </modal>
+</view>

@@ -1,0 +1,33 @@
+<!--pages/student/feedBack/feedBack.wxml-->
+<view class='content'>
+  <text class='header'>课程反馈</text>
+  <view class='questions'>
+    <view class='list_column'>
+      <view class='list_item_row question_item' wx:for='{{feedback_list}}'>
+        <view class="divLine"></view>
+        <view class='padding_control'>
+          <text>{{item.sName}}:</text>
+          <text> {{item.comment}}</text>
+          <view class='list_item_row'>
+            <view class='list_item_left'></view>
+            <view class='list_item_right time_label'>
+              <text> 反馈时间：{{item.cTime}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="divLine"></view>
+    </view>
+  </view>
+  <view class='answer'>
+    <view class="weui-cells__title">新的反馈:</view>
+    <view class="weui-cells weui-cells_after-title m_input_style">
+      <view class="weui-cell">
+        <textarea class="weui-input" auto-focus placeholder="在此输入你的反馈" maxlength='-1' auto-height show-confirm-bar='false' bindinput='getFeedback'/>
+      </view>
+    </view>
+  </view>
+  <view class='submit'>
+    <button bindtap='submitFeedback'>提交</button>
+  </view>
+</view>

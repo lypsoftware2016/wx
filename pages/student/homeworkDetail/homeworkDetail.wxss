@@ -1,0 +1,64 @@
+/* pages/student/homeworkDetail/homeworkDetail.wxss */
+
+.list_column-concretequestion {
+  margin-top: 50px;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio {
+  display: block;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox {
+  display: block;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.list_item_row {
+  padding-left: 8px;
+  padding-top: 8px;
+  padding-right: 8px;
+  padding-bottom: 8px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 20px;
+  background-color: #fff;
+  border: 1px solid #eaeaea;
+  border-bottom: 1px solid #d0d0d0;
+  border-radius: 5px;
+}
+
+.header {
+  font-size: 24px;
+}
+
+.sub {
+  width: 80%;
+  margin-top: 200px;
+  margin-left: 10%;
+  margin-bottom: 8px;
+}
+
+.question_name {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+.option-content {
+  margin-left: 10px;
+}

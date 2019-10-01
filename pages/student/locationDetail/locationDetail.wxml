@@ -1,0 +1,10 @@
+<!--pages/student/locationDetail/locationDetail.wxml-->
+<view class='content'>
+  <text class='header'>签到</text>
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" 
+    circles="{{circles}}" show-location style="width: 100%; height: {{view.Height}}px;">
+  </map>
+  <button disabled="{{disable}}" type='primary' class='sub' bindtap='lSignOn'>签到</button>
+</view>
+
+

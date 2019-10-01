@@ -1,0 +1,4 @@
+/* pages/teacher/history/history.wxss */
+header {
+  margin-left: 10px
+}

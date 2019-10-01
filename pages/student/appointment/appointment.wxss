@@ -1,0 +1,87 @@
+/* pages/student/appointment/appointment.wxss */
+.list_column{
+  width: 90%;
+  margin-left:20rpx;
+}
+
+.list_item_row{
+  margin: 5% 0 5% 0;  
+  display: flex;
+  flex-direction: row;
+}
+
+.list_item_left{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left:20rpx;
+  font-size: 45rpx;
+}
+.list_item_right{
+  display: flex;
+  flex-direction: row;
+  align-items:center;
+  /* justify-content:center; */
+  margin-left:35rpx;
+  padding-top:60rpx;
+}
+
+.btn_unchosed{
+  font-size: 30rpx;
+  background-color: #fff;
+  width: 180rpx;
+}
+
+
+.btn_chosed{
+  font-size: 30rpx;
+  width: 180rpx;
+  background-color: rgb(211, 211, 211);
+}
+
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-left:20rpx;
+  font-size: 45rpx;
+}
+.header{
+  font-size: 18px;
+  background-color: #fff;
+  margin-left:20rpx;
+  margin-right:0;
+  border-bottom:2px solid rgba(179, 235, 235, 0.945);
+  border-top:0rpx;
+  border-left:0rpx;
+  border-right:2px solid rgba(179, 235, 235, 0.945);
+  border-radius: 0;
+}
+.header:After{
+  font-size: 18px;
+  margin-left:20rpx;
+  /* border-bottom:2px solid rgba(179, 235, 235, 0.945); */
+  border-top:0rpx;
+  border-left:0rpx;
+  border-right:2px solid rgba(179, 235, 235, 0.945);
+}
+.appointed{
+  margin-left:0;
+  background-color: #fff;
+  font-size: 18px;
+  border-bottom:2px solid rgba(179, 235, 235, 0.945);
+  border-top:0rpx;
+  border-left:0rpx;
+  border-right:0rpx;
+  border-radius: 0;
+}
+.appointed:after{
+  font-size: 18px;
+  /* border-bottom:2px solid rgba(179, 235, 235, 0.945); */
+  border-top:0rpx;
+  border-left:0rpx;
+  border-right:0rpx;
+}
+.showtime{
+  font-size: 16px;
+}

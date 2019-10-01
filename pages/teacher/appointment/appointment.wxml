@@ -1,0 +1,67 @@
+<!--pages/teacher/appointment/appointment.wxml-->
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+  <text class='header'>预约</text>
+
+  <view class="font">
+    <view class='reserve'>
+      <view class='flex reserve_type'>
+        <view>选择日期</view>
+        <view class='reserve_date'>
+          <picker mode="date" value="{{startDate}}" name='datepicker' start="{{startDate}}" end="" bindchange="bindStartDateChange">
+            <view class="picker reserve_sele">{{startDate}}</view>
+          </picker>
+          <!--
+          <image class='reserve_arrow' src='/images/huise@2x.png'></image>
+          -->
+        </view>
+        
+      </view>
+
+      <view class='flex reserve_type'>
+        <view>预计开始时间</view>
+        <view class='reserve_date'>
+          <picker mode="time" value="{{startTime}}" name='timepicker' start="09:00" end="21:00" bindchange="bindStartTimeChange">
+            <view class="picker">{{startTime}}</view>
+          </picker>
+           <!--
+          <image class='reserve_arrow' src='/images/huise@2x.png'></image>
+           -->
+        </view>
+       
+      </view>
+      
+    </view>
+    <view class='reserve'>
+      <view class='flex reserve_type'>
+        <view>选择日期</view>
+        <view class='reserve_date'>
+          <picker mode="date" value="{{endDate}}" name='datepicker' start="{{endDate}}" end="" bindchange="bindEndDateChange">
+            <view class="picker reserve_sele">{{endDate}}</view>
+          </picker>
+          <!--
+          <image class='reserve_arrow' src='/images/huise@2x.png'></image>
+          -->
+        </view>
+        
+      </view>
+
+      <view class='flex reserve_type'>
+        <view>预计结束时间</view>
+        <view class='reserve_date'>
+          <picker mode="time" value="{{endTime}}" name='timepicker' start="09:01" end="21:01" bindchange="bindEndTimeChange">
+            <view class="picker">{{endTime}}</view>
+          </picker>
+          <!--
+          <image class='reserve_arrow' src='/images/huise@2x.png'></image>
+          -->
+        </view>
+
+      </view>
+      
+    </view>
+    <view class='footer'>
+      <button bindtap='appoint'>发布预约</button>
+    </view>
+  </view>

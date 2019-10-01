@@ -1,0 +1,23 @@
+<!--pages/teacher/toFeedBack/toFeedBack.wxml-->
+<view class='content'>
+  <text class='header'>课程反馈</text>
+  <view class='questions'>
+    <view class='list_column'>
+      <view class='list_item_row question_item' wx:for='{{feedback_list}}'>
+        <view class="divLine"></view>
+        <view class='padding_control'>
+          <text>{{item.sName}}:</text>
+          <text> {{item.comment}}</text>
+          <view class='list_item_row'>
+            <view class='list_item_left'></view>
+            <view class='list_item_right time_label'>
+              <text> 反馈时间：{{item.cTime}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="divLine"></view>
+    </view>
+  </view>
+</view>
+

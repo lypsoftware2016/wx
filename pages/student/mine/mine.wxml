@@ -1,0 +1,12 @@
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+<view class='content'>
+  <view class = 'btn_block'>
+    <button class='content_btn' bindtap='toClassSchedule'><text>课程表</text></button>
+    <button class='content_btn' bindtap='toCourseVideo'><text>视频课程</text></button>
+    <button class='content_btn'  bindtap='toAppointment'><text>预约</text></button>
+  </view>
+</view>
+
+

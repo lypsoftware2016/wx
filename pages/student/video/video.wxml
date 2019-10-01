@@ -1,0 +1,4 @@
+<!--pages/student/Video/video.wxml-->
+<view class="container">
+  <video src="{{videoUrl}}"   controls  show-fullscreen-btn ></video>
+</view>

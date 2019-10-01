@@ -1,0 +1,28 @@
+/* pages/student/courseDoc/courseDoc.wxss */
+
+.list_item{
+  width: 90%;
+  text-align: start;
+}
+
+.list_item_row{
+  margin: 2% 0 2% 0;
+  width: 90%;
+}
+
+.doc_labels{
+  font-size: 24rpx;
+  flex-shrink: 0;
+  /* width: 40%; */
+}
+
+.doc_labels > .list_column{
+  display: flex;
+  align-items: flex-start;
+}
+
+.doc_labels > view{
+  margin: 0;
+  padding: 0;
+  line-height: 40rpx; 
+}

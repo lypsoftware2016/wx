@@ -1,0 +1,36 @@
+<!--pages/test/test.wxml-->
+<text>pages/test/test.wxml</text>
+<view>
+
+  <view class="userinfo">
+    <image 
+      open-type="getUserInfo" 
+      bindgetuserinfo="onGetUserInfo"
+      class="userinfo-avatar"
+      src="{{avatarUrl}}"
+    >
+    </image>
+    
+    <open-data type="userNickName" class = "nickText"></open-data>
+  </view>
+
+  <view class="titleBlock">
+    <text class="titleText">课程名称</text>
+  </view>
+
+  <view class="back">
+    <block wx:for="{{courseInfo}}" wx:key="{{cId}}">
+      <view class = "coursecontainer">
+        <navigator url="../oneCourse/oneCourse?cId={{item.cId}}&cName={{item.cName}}&start={{item.start}}&end={{end}}&tId={{tId}}" open-type="navigate" class="course">
+          <image 
+            class="courseIcon"
+            src="{{courseUrl}}"
+          >
+          </image>
+          <text class = "cName">{{item.cName}}</text>
+        </navigator>
+      </view>
+    </block>
+  </view>
+
+</view>

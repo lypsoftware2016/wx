@@ -1,0 +1,48 @@
+<!--pages/teacher/location/location.wxml-->
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+<view class='content'>
+  <text class='header'>课程签到</text>
+
+  <view class='course_label'>
+    <text >{{cName}}</text> 
+  </view>
+
+  <view class="font">
+    <view class='reserve'>
+      <view class='reserve_type reserve_man'>
+        <view class='reserve_num'>选择日期</view>
+        <view class='reserve_date'>
+          <picker mode="date" value="{{date}}" name='datepicker' start="{{date}}" end="" bindchange="bindDateChange">
+            <view class="picker reserve_sele">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class='reserve_type reserve_man'>
+        <view class='reserve_num'>预计开始时间</view>
+        <view class='reserve_date'>
+          <picker mode="time" value="{{time}}" name='timepicker' start="08:01" end="21:01" bindchange="bindTimeChange">
+            <view class="picker">{{time}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <view class='reserve_type reserve_man'>
+        <view class='reserve_num'>半径范围</view>
+        <input placeholder-style='color: #999;font-size: 30rpx;' name='lxr' class='reserve_inp' placeholder='100' bindinput="signCodeInput"/>
+      </view>
+      
+    </view>
+    
+    <view class='footer'>
+      <button class='btn-area' bindtap='signOn'>开始签到</button>
+    </view>
+  </view>
+
+  <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" 
+    circles="{{circles}}" show-location style="width: 100%; height: {{view.Height}}px;">
+  </map>
+
+</view>

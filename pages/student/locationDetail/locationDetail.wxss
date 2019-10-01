@@ -1,0 +1,11 @@
+/* pages/student/locationDetail/locationDetail.wxss */
+
+.header {
+  font-size: 25px;
+}
+
+.sub {
+  width: 80%;
+  margin-top: 150px;
+  margin-left: 10%;
+}

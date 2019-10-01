@@ -1,0 +1,18 @@
+<!--pages/teacher/statistic/statistic.wxml-->
+<view class='question'>
+  <text class='header'>课堂问题</text>
+
+  <view class='news-item-container'>
+    <scroll-view scroll-y="true">
+      <navigator url='../statisticDetail/statisticDetail?hId={{item.hId}}' wx:for='{{homework_list}}' class='list_column'>
+        <view class='homework_label'>
+          <view class='title'>
+            <text>{{item.hTitle}}</text>
+          </view>
+        </view>
+      </navigator>
+    </scroll-view>
+  </view>
+
+
+</view>

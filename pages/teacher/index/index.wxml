@@ -1,0 +1,16 @@
+<!--pages/teacher/index/index.wxml-->
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+<view class='content'>
+  <text class='header'>我教授的课程</text>
+  <view wx:for="{{teachCourse_list}}" class='list'>
+    <view class='list_item'>
+      <view class='list_btn'>
+        <button bindtap='toCourseDetail' data-item="{{item}}">
+          <text>{{item.cName}}</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

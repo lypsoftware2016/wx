@@ -1,0 +1,16 @@
+<!--pages/student/checkIn/checkIn.wxml-->
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+<view class='content'>
+  <text class='header'>可签到的课程</text>
+  <view wx:for="{{signOn_list}}" class='list'>
+    <view class='list_item'>
+      <view class='list_btn'>
+        <button bindtap='toSignOn' data-item="{{item}}">
+          <text>{{item.lName}}</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

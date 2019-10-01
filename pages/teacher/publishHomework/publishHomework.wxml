@@ -1,0 +1,48 @@
+<!--pages/teacher/publishHomework/publishHomework.wxml-->
+<view class='content'>
+  <text class='header'>发布作业</text>
+
+  <view class='reserve'>
+      <view class='flex reserve_type'>
+        <view>截止日期</view>
+        <view class='reserve_date'>
+          <picker mode="date" value="{{date}}" name='datepicker' start="{{date}}" end="" bindchange="bindDateChange">
+            <view class="picker reserve_sele">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+      
+      <view class='reserve_type reserve_man'>
+        <view class='reserve_num'>作业描述</view>
+        <input placeholder-style='color: #999;font-size: 30rpx;' name='lxr' class='reserve_inp' placeholder='请输入作业描述' bindinput="descriptionInput"/>
+      </view>
+    </view>
+
+    <view class="tui-content">
+    <text class='header'>选择题</text>
+  <checkbox-group bindchange="checkboxChange">
+     
+    <label class="checkbox" wx:for="{{items}}">
+      <view class="tui-menu-list">
+        <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}
+      </view>     
+    </label>
+  </checkbox-group>
+ 
+  <text class='header'>简答题</text>
+  <checkbox-group bindchange="checkboxChange2">
+     
+    <label class="checkbox" wx:for='{{simpleQuestions}}'>
+      <view class="tui-menu-list">
+        <checkbox value="{{item.id}}" checked="{{item.checked}}"/>{{item.value}}</view>     
+    </label>
+  </checkbox-group>
+
+  <view class='footer'>
+      <button class='btn-area' bindtap='toPublish'>发布</button>
+    </view>
+
+  </view>
+
+</view>
+

@@ -1,0 +1,78 @@
+/* pages/student/index/index.wxss */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10%;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.header {
+  text-align: center
+}
+
+.list_column{
+  width: 100%;
+}
+
+.list_item_title{
+  width: 90%; 
+}
+
+.list_item_row{
+  width: 95%;
+  margin-left: 5px;
+  margin-right: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;  
+}
+
+list_item_left, list_item_right{
+  display: flex;
+  margin: 10% 5% 0 ;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.list_item_left{
+  font-size: 45rpx;
+  width: 400rpx;
+}
+
+.btn_unchosed{
+  font-size: 30rpx;
+  background-color: #fff;
+  width: 180rpx;
+}
+
+
+.btn_chosed{
+  font-size: 30rpx;
+  width: 180rpx;
+  background-color: rgb(211, 211, 211);
+}
+
+
+
+.course_label{
+border: 1px solid rgb(184, 181, 181);
+display: flex;
+margin-left: 5px;
+margin-right: 5px;
+margin-top: 5px;
+flex-direction:column;
+}

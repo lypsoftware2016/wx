@@ -1,0 +1,13 @@
+<!--pages/student/locationSignOn/locationSignOn.wxml-->
+<view class='content'>
+  <text class='header'>可签到的课程</text>
+  <view wx:for="{{signOn_list}}" class='list'>
+    <view class='list_item'>
+      <view class='list_btn'>
+        <button bindtap='toLocation' data-item="{{item}}">
+          <text>{{item.lName}}</text>
+        </button>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<!--pages/student/classSchedule/classSchedule.wxml-->
+<view class='content'>
+ <image src="{{imageUrl}}" mode="aspectFill"></image>
+</view>

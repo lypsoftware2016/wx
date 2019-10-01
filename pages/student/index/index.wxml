@@ -1,0 +1,46 @@
+<!--pages/student/index/index.wxml-->
+<import src="../../../template/tabbar.wxml"/> 
+<template is="tabBar" data="{{tabBar}}"/>
+
+<view class='content'>
+  <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+  <block wx:else>
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </view>
+
+   <view class='content'>
+    
+    <text class='header'>选课列表</text>
+
+    <scroll-view
+      scroll-y
+      style="height: 300px;white-space:nowrap;"
+    >
+      <view wx:for='{{class_list}}' wx:key='id' class='list_column'>
+        <view class='course_label'>
+
+          <view class='list_item_title'>
+            {{item.cName}}
+          </view>
+          
+          <view class='list_item_row'>
+            <view class='list_item_left'>
+              <button data-item="{{item}}" bindtap='toCourseDetail' size = 'mini'>查看课程详情</button>
+            </view>
+            <view class='list_item_right'>
+              <button class='btn_chosed' wx:if='{{item.isSelected==true}}' bindtap='deselectCourse' data-item='{{item}}' data-id='{{item.cId}}' size = 'mini'> 取消选课 </button>
+              <button class='btn_unchosed' wx:else bindtap='showModal' data-item='{{item}}' data-id='{{item.cId}}' size = 'mini'> 选课 </button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+
+    <modal id="modal" hidden="{{hiddenmodalput}}" title="输入选课密码" confirm-text="确定" cancel-text="取消" bindcancel="cancel" bindconfirm="confirm">
+      <input type='text' placeholder="选课密码" auto-focus bindinput='inputToken'/>
+    </modal>
+   </view>
+  </block>
+</view>

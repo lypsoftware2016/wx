@@ -1,0 +1,51 @@
+/* pages/student/feedBack/feedBack.wxss */
+
+@import "/lib/weui.wxss";
+
+.questions, .list_column{
+  width: 100%;
+}
+
+.question_item{
+  align-content: center;
+  flex-direction: column;
+  background-color:#fff; 
+  text-align: start;
+  border-radius: 0;
+  border: 0;
+  padding: 0;
+  line-height:55rpx;
+  width:100%;
+}
+
+.question_item::after{
+  border: 0;
+  border-radius: 0;
+}
+
+.padding_control{
+  padding: 2% 5% 0 5%;
+  align-content: center;
+  width: 90%;
+}
+
+.time_label{
+  font-size: 20rpx;
+  align-self: flex-end;
+  flex-shrink: 0;
+}
+
+.content{
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+.m_input_style{
+  margin-bottom: 10%; 
+}
+
+.answer{
+  margin-top: 10%;
+  width: 100%;
+}

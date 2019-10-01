@@ -1,0 +1,13 @@
+<!--pages/student/courseDetail/courseDetail.wxml-->
+<view class='content'>
+  <text class='header'>{{courseName}}</text>
+  <view class = 'btn_block'>
+    <button class='content_btn' bindtap='toQuestions' data-item='{{courseName}}' data-id='{{courseId}}'><text>课堂问题</text></button>
+    <button class='content_btn' bindtap='toCourseDoc' data-item='{{courseName}}' data-id='{{courseId}}'><text>课程资料</text></button>
+    <button class='content_btn'  bindtap='toCourseGrade' data-item='{{courseName}}' data-id='{{courseId}}'><text>课程成绩</text></button>
+    <button class='content_btn'  bindtap='toFeedBack' data-item='{{courseName}}' data-id='{{courseId}}'><text>课程反馈</text></button>
+    <button class='content_btn'  bindtap='toLocationSignOn' data-item='{{courseName}}' data-id='{{courseId}}'><text>课堂签到</text></button>
+  </view>
+</view>
+
+
