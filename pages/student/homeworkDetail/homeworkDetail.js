@@ -1,7 +1,6 @@
 // pages/student/homeworkDetail/homeworkDetail.js
 
 let mymap = new Map();
-let nmap = new Map();
 
 Page({
 
@@ -15,29 +14,17 @@ Page({
     mymap: new Map(),
   },
 
+  simpleQuestionInput(e) {
+    this.setData({
+      sqResult: e.detail.value
+    })
+  },
+
   radioChange: function(e) {
-    console.log(e.detail.value)
     var value = new Array();
     value = e.detail.value.split("+");
     mymap.set(value[1], value[0]);
     console.log(mymap)
-
-  },
-
-  checkboxChange: function (e) {
-    nmap = new Map();
-    var result = e.detail.value;
-    for (let j = 0; j < result.length; ++j) {
-      var value = new Array();
-      value = result[j].split("+");
-      if (nmap.has(value[1])) {
-        var temp = nmap.get(value[1]) + value[0];
-        nmap.set(value[1], temp);
-      }else {
-        nmap.set(value[1], value[0]);
-      }
-    }
-    console.log(nmap);
 
   },
 
@@ -46,16 +33,13 @@ Page({
     for (let [k, v] of mymap) {
       obj[k] = v;
     }
-    for (let [k, v] of nmap) {
-      obj[k] = v;
-    }
     console.log("there is obj");
     console.log(JSON.stringify(obj));
 	var address = 'https://www.ufeng.top/TeachingAssistantSystem'
     var that = this;
-    if (mymap.size + nmap.size < that.data.choiceQuestion_list.length) {
+    if (mymap.size == 0) {
       wx.showToast({
-        title: '题目未完成',
+        title: '请先选择',
         icon: 'none',
         duration: 2000
       })
@@ -133,8 +117,8 @@ Page({
 	var address = 'https://www.ufeng.top/TeachingAssistantSystem'
     var that = this;
     wx.request({
-      url: address + '/question/findQuestion',
-      //url: 'http://localhost:8080/question/findQuestion',
+	  url: address + '/question/findQuestion',
+      //url: 'http://localhost:8080/question/findChoiceQuestion',
 	  method: 'POST',
       data: {
         hId: that.data.hId
@@ -151,7 +135,6 @@ Page({
           simpleQuestion: res.data.simpleQuestion
         })
         mymap = new Map();
-        nmap = new Map();
       }
     });
   },

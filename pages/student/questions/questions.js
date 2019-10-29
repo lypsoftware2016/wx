@@ -34,10 +34,10 @@ Page({
    */
   onShow: function () {
 	var address = 'https://www.ufeng.top/TeachingAssistantSystem'
+    //var address = 'http://localhost:8080/TeachingAssistantSystem'
     var that = this;
     wx.request({
 	  url: address + '/question/findHomework',
-      //url: 'http://localhost:8080/question/findHomework',
 	  method: 'POST',
       data: {
         cId: that.data.cId
